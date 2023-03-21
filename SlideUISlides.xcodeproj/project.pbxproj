@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE30A06129C9CD9100C4FD67 /* AboutSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A06029C9CD9100C4FD67 /* AboutSlide.swift */; };
+		BE30A06329C9D1B800C4FD67 /* RegexExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A06229C9D1B800C4FD67 /* RegexExample.swift */; };
+		BE30A06529C9D60600C4FD67 /* MotivationSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A06429C9D60600C4FD67 /* MotivationSlide.swift */; };
+		BE30A06729C9D9C100C4FD67 /* Motivace2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A06629C9D9C100C4FD67 /* Motivace2.swift */; };
+		BE30A06929C9DB1A00C4FD67 /* PackageBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A06829C9DB1A00C4FD67 /* PackageBackground.swift */; };
+		BE30A06C29C9DD7E00C4FD67 /* InsideSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A06B29C9DD7E00C4FD67 /* InsideSlide.swift */; };
+		BE30A06E29C9E0AE00C4FD67 /* RepoExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A06D29C9E0AE00C4FD67 /* RepoExample.swift */; };
+		BE30A07029C9E13400C4FD67 /* PluginSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A06F29C9E13400C4FD67 /* PluginSlide.swift */; };
+		BE30A07229C9E90E00C4FD67 /* Outro.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A07129C9E90E00C4FD67 /* Outro.swift */; };
+		BE69AB3729C8A6B300F618C8 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE69AB3629C8A6B300F618C8 /* App.swift */; };
+		BE69AB3929C8A6B300F618C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE69AB3829C8A6B300F618C8 /* Assets.xcassets */; };
+		BE69AB3C29C8A6B300F618C8 /* WowBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE69AB3B29C8A6B300F618C8 /* WowBackground.swift */; };
+		BE69AB3F29C8A6B300F618C8 /* TitleSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE69AB3E29C8A6B300F618C8 /* TitleSlide.swift */; };
+		BE69AB4729C8A6D100F618C8 /* SlideUI in Frameworks */ = {isa = PBXBuildFile; productRef = BE69AB4629C8A6D100F618C8 /* SlideUI */; };
+		BE69AB4929C8A6D100F618C8 /* SlideUICommons in Frameworks */ = {isa = PBXBuildFile; productRef = BE69AB4829C8A6D100F618C8 /* SlideUICommons */; };
+		BE69AB4B29C8A6D100F618C8 /* SlideUIViews in Frameworks */ = {isa = PBXBuildFile; productRef = BE69AB4A29C8A6D100F618C8 /* SlideUIViews */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BE30A06029C9CD9100C4FD67 /* AboutSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSlide.swift; sourceTree = "<group>"; };
+		BE30A06229C9D1B800C4FD67 /* RegexExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexExample.swift; sourceTree = "<group>"; };
+		BE30A06429C9D60600C4FD67 /* MotivationSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationSlide.swift; sourceTree = "<group>"; };
+		BE30A06629C9D9C100C4FD67 /* Motivace2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motivace2.swift; sourceTree = "<group>"; };
+		BE30A06829C9DB1A00C4FD67 /* PackageBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageBackground.swift; sourceTree = "<group>"; };
+		BE30A06B29C9DD7E00C4FD67 /* InsideSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideSlide.swift; sourceTree = "<group>"; };
+		BE30A06D29C9E0AE00C4FD67 /* RepoExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoExample.swift; sourceTree = "<group>"; };
+		BE30A06F29C9E13400C4FD67 /* PluginSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginSlide.swift; sourceTree = "<group>"; };
+		BE30A07129C9E90E00C4FD67 /* Outro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outro.swift; sourceTree = "<group>"; };
+		BE69AB3329C8A6B300F618C8 /* SlideUISlides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideUISlides.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE69AB3629C8A6B300F618C8 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		BE69AB3829C8A6B300F618C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE69AB3B29C8A6B300F618C8 /* WowBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WowBackground.swift; sourceTree = "<group>"; };
+		BE69AB3E29C8A6B300F618C8 /* TitleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSlide.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE69AB3029C8A6B300F618C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE69AB4B29C8A6D100F618C8 /* SlideUIViews in Frameworks */,
+				BE69AB4729C8A6D100F618C8 /* SlideUI in Frameworks */,
+				BE69AB4929C8A6D100F618C8 /* SlideUICommons in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE30A06A29C9DD6A00C4FD67 /* InSlideUI */ = {
+			isa = PBXGroup;
+			children = (
+				BE30A06229C9D1B800C4FD67 /* RegexExample.swift */,
+				BE30A06B29C9DD7E00C4FD67 /* InsideSlide.swift */,
+				BE30A06D29C9E0AE00C4FD67 /* RepoExample.swift */,
+				BE30A06F29C9E13400C4FD67 /* PluginSlide.swift */,
+			);
+			path = InSlideUI;
+			sourceTree = "<group>";
+		};
+		BE69AB2A29C8A6B200F618C8 = {
+			isa = PBXGroup;
+			children = (
+				BE69AB3529C8A6B300F618C8 /* SlideUISlides */,
+				BE69AB3429C8A6B300F618C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE69AB3429C8A6B300F618C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE69AB3329C8A6B300F618C8 /* SlideUISlides.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE69AB3529C8A6B300F618C8 /* SlideUISlides */ = {
+			isa = PBXGroup;
+			children = (
+				BE69AB3629C8A6B300F618C8 /* App.swift */,
+				BE69AB3829C8A6B300F618C8 /* Assets.xcassets */,
+				BE69AB3A29C8A6B300F618C8 /* Backgrounds */,
+				BE69AB3D29C8A6B300F618C8 /* Slides */,
+			);
+			path = SlideUISlides;
+			sourceTree = "<group>";
+		};
+		BE69AB3A29C8A6B300F618C8 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				BE69AB3B29C8A6B300F618C8 /* WowBackground.swift */,
+				BE30A06829C9DB1A00C4FD67 /* PackageBackground.swift */,
+				BE30A07129C9E90E00C4FD67 /* Outro.swift */,
+			);
+			path = Backgrounds;
+			sourceTree = "<group>";
+		};
+		BE69AB3D29C8A6B300F618C8 /* Slides */ = {
+			isa = PBXGroup;
+			children = (
+				BE30A06A29C9DD6A00C4FD67 /* InSlideUI */,
+				BE69AB3E29C8A6B300F618C8 /* TitleSlide.swift */,
+				BE30A06029C9CD9100C4FD67 /* AboutSlide.swift */,
+				BE30A06429C9D60600C4FD67 /* MotivationSlide.swift */,
+				BE30A06629C9D9C100C4FD67 /* Motivace2.swift */,
+			);
+			path = Slides;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE69AB3229C8A6B300F618C8 /* SlideUISlides */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE69AB4229C8A6B300F618C8 /* Build configuration list for PBXNativeTarget "SlideUISlides" */;
+			buildPhases = (
+				BE69AB2F29C8A6B300F618C8 /* Sources */,
+				BE69AB3029C8A6B300F618C8 /* Frameworks */,
+				BE69AB3129C8A6B300F618C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlideUISlides;
+			packageProductDependencies = (
+				BE69AB4629C8A6D100F618C8 /* SlideUI */,
+				BE69AB4829C8A6D100F618C8 /* SlideUICommons */,
+				BE69AB4A29C8A6D100F618C8 /* SlideUIViews */,
+			);
+			productName = SlideUISlides;
+			productReference = BE69AB3329C8A6B300F618C8 /* SlideUISlides.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE69AB2B29C8A6B200F618C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					BE69AB3229C8A6B300F618C8 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = BE69AB2E29C8A6B200F618C8 /* Build configuration list for PBXProject "SlideUISlides" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE69AB2A29C8A6B200F618C8;
+			packageReferences = (
+				BE69AB4529C8A6D100F618C8 /* XCRemoteSwiftPackageReference "SlideUI" */,
+			);
+			productRefGroup = BE69AB3429C8A6B300F618C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE69AB3229C8A6B300F618C8 /* SlideUISlides */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE69AB3129C8A6B300F618C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE69AB3929C8A6B300F618C8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE69AB2F29C8A6B300F618C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE30A06E29C9E0AE00C4FD67 /* RepoExample.swift in Sources */,
+				BE30A06729C9D9C100C4FD67 /* Motivace2.swift in Sources */,
+				BE69AB3F29C8A6B300F618C8 /* TitleSlide.swift in Sources */,
+				BE30A07029C9E13400C4FD67 /* PluginSlide.swift in Sources */,
+				BE69AB3729C8A6B300F618C8 /* App.swift in Sources */,
+				BE30A06C29C9DD7E00C4FD67 /* InsideSlide.swift in Sources */,
+				BE30A06329C9D1B800C4FD67 /* RegexExample.swift in Sources */,
+				BE30A06529C9D60600C4FD67 /* MotivationSlide.swift in Sources */,
+				BE69AB3C29C8A6B300F618C8 /* WowBackground.swift in Sources */,
+				BE30A06929C9DB1A00C4FD67 /* PackageBackground.swift in Sources */,
+				BE30A06129C9CD9100C4FD67 /* AboutSlide.swift in Sources */,
+				BE30A07229C9E90E00C4FD67 /* Outro.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BE69AB4029C8A6B300F618C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BE69AB4129C8A6B300F618C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		BE69AB4329C8A6B300F618C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.miki.SlideUISlides;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BE69AB4429C8A6B300F618C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.miki.SlideUISlides;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE69AB2E29C8A6B200F618C8 /* Build configuration list for PBXProject "SlideUISlides" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE69AB4029C8A6B300F618C8 /* Debug */,
+				BE69AB4129C8A6B300F618C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE69AB4229C8A6B300F618C8 /* Build configuration list for PBXNativeTarget "SlideUISlides" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE69AB4329C8A6B300F618C8 /* Debug */,
+				BE69AB4429C8A6B300F618C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BE69AB4529C8A6D100F618C8 /* XCRemoteSwiftPackageReference "SlideUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mikolasstuchlik/SlideUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BE69AB4629C8A6D100F618C8 /* SlideUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE69AB4529C8A6D100F618C8 /* XCRemoteSwiftPackageReference "SlideUI" */;
+			productName = SlideUI;
+		};
+		BE69AB4829C8A6D100F618C8 /* SlideUICommons */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE69AB4529C8A6D100F618C8 /* XCRemoteSwiftPackageReference "SlideUI" */;
+			productName = SlideUICommons;
+		};
+		BE69AB4A29C8A6D100F618C8 /* SlideUIViews */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE69AB4529C8A6D100F618C8 /* XCRemoteSwiftPackageReference "SlideUI" */;
+			productName = SlideUIViews;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BE69AB2B29C8A6B200F618C8 /* Project object */;
+}
