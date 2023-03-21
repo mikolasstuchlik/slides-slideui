@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE01C73229C9FE7F00E755D3 /* CompareSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE01C73129C9FE7F00E755D3 /* CompareSlide.swift */; };
 		BE30A06129C9CD9100C4FD67 /* AboutSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A06029C9CD9100C4FD67 /* AboutSlide.swift */; };
 		BE30A06329C9D1B800C4FD67 /* RegexExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A06229C9D1B800C4FD67 /* RegexExample.swift */; };
 		BE30A06529C9D60600C4FD67 /* MotivationSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A06429C9D60600C4FD67 /* MotivationSlide.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE01C73129C9FE7F00E755D3 /* CompareSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareSlide.swift; sourceTree = "<group>"; };
 		BE30A06029C9CD9100C4FD67 /* AboutSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSlide.swift; sourceTree = "<group>"; };
 		BE30A06229C9D1B800C4FD67 /* RegexExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexExample.swift; sourceTree = "<group>"; };
 		BE30A06429C9D60600C4FD67 /* MotivationSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationSlide.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				BE30A06029C9CD9100C4FD67 /* AboutSlide.swift */,
 				BE30A06429C9D60600C4FD67 /* MotivationSlide.swift */,
 				BE30A06629C9D9C100C4FD67 /* Motivace2.swift */,
+				BE01C73129C9FE7F00E755D3 /* CompareSlide.swift */,
 			);
 			path = Slides;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE01C73229C9FE7F00E755D3 /* CompareSlide.swift in Sources */,
 				BE30A06E29C9E0AE00C4FD67 /* RepoExample.swift in Sources */,
 				BE30A06729C9D9C100C4FD67 /* Motivace2.swift in Sources */,
 				BE69AB3F29C8A6B300F618C8 /* TitleSlide.swift in Sources */,

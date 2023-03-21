@@ -1,6 +1,12 @@
 import SwiftUI
 import SlideUI
 
+/*
+TODO:
+Opravit templaty
+Přidat table template
+*/
+
 private let backgrounds: [any Background.Type] = [
     WowBackground.self,
     PackageBackground.self,
@@ -16,6 +22,7 @@ private let slides: [any Slide.Type] = [
     RepoExample.self,
     RegexExample.self,
     PluginSlide.self,
+    CompareSlide.self,
 ]
 
 // @focuses(focuses){
@@ -33,6 +40,7 @@ private var focuses: [Focus] = [
     Focus(kind: .specific([RepoExample.self]), hint: generated_hint_10),
     Focus(kind: .specific([RegexExample.self]), hint: generated_hint_11),
     Focus(kind: .specific([PluginSlide.self]), hint: generated_hint_12),
+    Focus(kind: .specific([CompareSlide.self])),
     Focus(kind: .unbound(Camera(offset: CGVector(dx: 2.2353000649159385, dy: -0.5481867958034121), scale: 0.08399999999999999)), hint: generated_hint_13)
 ]
 
@@ -99,7 +107,7 @@ private let generated_hint_12: String =
 
 private let generated_hint_13: String =
 """
-Děkuji za pozornost
+Děkuji za pozornost - a na závěr mi dovolte Vás ještě oslnit
 """
 
 // }@focuses(focuses)
@@ -124,3 +132,4 @@ struct SlideUISlidesApp: App {
         }
     }
 }
+
