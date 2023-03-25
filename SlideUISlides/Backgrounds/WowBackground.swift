@@ -24,7 +24,7 @@ struct WowBackground: Background {
 
             Text("so animated")
                 .font(.custom("ComicSansMS",fixedSize: 50))
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .rotationEffect(.degrees(350))
                 .position(
                     x: presentation.frameSize.width * WowBackground.relativeSize.width * 0.75,
@@ -47,7 +47,7 @@ struct WowBackground: Background {
 struct WowBackground_Previews: PreviewProvider {
     static var previews: some View {
         WowBackground()
-            .frame(width: 1024, height: 768)
+            .frame(width: 1920, height: 1080)
             .environmentObject(PresentationProperties.preview())
     }
 }

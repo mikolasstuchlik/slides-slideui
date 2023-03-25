@@ -14,9 +14,6 @@ struct RegexExample: Slide {
 """
     // }@hint(RegexExample)
 
-    init() {}
-
-
     private static let defaultCode =
 #"""
 import Foundation
@@ -27,12 +24,41 @@ print("👧🏼".allSatisfy { $0.unicodeScalars.allSatisfy(aSet.contains(_:)) })
 """#
 
     private static let defaultStdIn = [
-        "swiftc regexEx.swift && ./regexEx"
+        "swiftc code.swift && ./code"
     ]
 
-    @State var content: String = RegexExample.defaultCode
-    @State var state: TerminalView.State = .idle
-    @State var stdin: String = RegexExample.defaultStdIn[0]
+    public final class ExposedState: ForwardEventCapturingState {
+        public static var stateSingleton: RegexExample.ExposedState = .init()
+
+        @Published var execCode: TextEditorView.Model = .init(
+            filePath: FileCoordinator.shared.pathToFolder(for: "codeExample") + "/code.swift",
+            format: .swift,
+            content: RegexExample.defaultCode
+        )
+        @Published var terminal: TerminalView.Model = .init(
+            workingPath: URL(fileURLWithPath: FileCoordinator.shared.pathToFolder(for: "codeExample")),
+            stdIn: RegexExample.defaultStdIn[0]
+        )
+        @Published var toggle: Bool = false
+
+        public func captured(forwardEvent number: UInt) -> Bool {
+            switch number {
+            case 0:
+                toggle.toggle()
+            case 1:
+                execCode.save()
+                terminal.execute()
+            case 2:
+                toggle.toggle()
+            default:
+                return false
+            }
+            return true
+        }
+    }
+    @ObservedObject private var state: ExposedState = ExposedState.stateSingleton
+
+    init() {}
 
     var body: some View {
         VStack(alignment: .leading, spacing: 32) {
@@ -49,20 +75,10 @@ print("👧🏼".allSatisfy { $0.unicodeScalars.allSatisfy(aSet.contains(_:)) })
  - Podporuje zadání pomocí explicitního výčtu znaků
 """
             ).font(.presentationBody).frame(maxWidth: .infinity, alignment: .topLeading)
-            ToggleView {
+            ToggleView(toggledOn: $state.toggle) {
                 VStack(spacing: 8) {
-                    TextEditorView(
-                        filePath: FileCoordinator.shared.pathToFolder(for: "stringcode") + "/regexEx.swift",
-                        format: .constant(.swift),
-                        content: $content
-                    )
-                    TerminalView(
-                        workingPath: URL(fileURLWithPath: FileCoordinator.shared.pathToFolder(for: "stringcode")),
-                        stdIn: $stdin,
-                        state: $state,
-                        aspectRatio: 0.35,
-                        axis: .horizontal
-                    )
+                    TextEditorView(model: state.execCode)
+                    TerminalView(model: state.terminal, aspectRatio: 0.35, axis: .horizontal)
                 }
             }
         }.padding()
@@ -72,7 +88,7 @@ print("👧🏼".allSatisfy { $0.unicodeScalars.allSatisfy(aSet.contains(_:)) })
 struct RegexExample_Previews: PreviewProvider {
     static var previews: some View {
         RegexExample()
-            .frame(width: 1024, height: 768)
+            .frame(width: 1920, height: 1080)
             .environmentObject(PresentationProperties.preview())
     }
 }

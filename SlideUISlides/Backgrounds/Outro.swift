@@ -18,7 +18,7 @@ struct Outro: Background {
 struct Outro_Previews: PreviewProvider {
     static var previews: some View {
         Outro()
-            .frame(width: 1024, height: 768)
+            .frame(width: 1920, height: 1080)
             .environmentObject(PresentationProperties.preview())
     }
 }
