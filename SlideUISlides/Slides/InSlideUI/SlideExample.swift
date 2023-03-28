@@ -7,7 +7,10 @@ struct SlideExample: Slide {
     // @offset(SlideExample)
     static var offset = CGVector(dx: 3.5, dy: 2.5)
     // @hint(SlideExample){
-    static var hint: String? = ""
+    static var hint: String? =
+"""
+Ukázat Preview (zmínit, že existuje)
+"""
     // }@hint(SlideExample)
 
     private static let code =
