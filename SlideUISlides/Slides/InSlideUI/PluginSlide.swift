@@ -10,9 +10,13 @@ struct PluginSlide: Slide {
     // @hint(PluginSlide){
     static var hint: String? =
 """
+Pokračujeme v ukázce dynamických vlastností
+
 Ukázku slide neukazuju, protože bych musel linkovat SlideUI dynamicky...
 
-Ukázat chybu (a probluvit o crashi)
+Ukázat chybu (a probluvit o crashi) FatalError()
+
+Ukázat light/dark
 """
     // }@hint(PluginSlide)
 
@@ -61,17 +65,13 @@ var stackedBarData: [ToyShape] = [
     public final class ExposedState: ForwardEventCapturingState {
         public static var stateSingleton: PluginSlide.ExposedState = .init()
 
-        @Published var compiler: CompilerView.Model = .init(uniqueName: "ExampleView", code: PluginSlide.defaultCode)
-
-        @Published var toggle: Bool = false
+        @Published var toggle: Bool = true
 
         public func captured(forwardEvent number: UInt) -> Bool {
             switch number {
             case 0:
                 withAnimation { toggle.toggle() }
             case 1:
-                compiler.execute()
-            case 2:
                 withAnimation { toggle.toggle() }
             default:
                 return false
@@ -79,7 +79,13 @@ var stackedBarData: [ToyShape] = [
             return true
         }
     }
+
+    @EnvironmentObject var presentation: PresentationProperties
+
     @ObservedObject private var state: ExposedState = ExposedState.stateSingleton
+
+    // It was observed, that view fails to update state if `compiler` SO is inside of ExposedState...
+    @StateObject var compiler: CompilerView.Model = .init(uniqueName: "ExampleView", code: PluginSlide.defaultCode)
 
     init() {}
 
@@ -91,8 +97,26 @@ var stackedBarData: [ToyShape] = [
             }
             ToggleView(toggledOn: $state.toggle) {
                 HStack {
-                    CompilerView(model: state.compiler, axis: .horizontal)
-                    switch state.compiler.state {
+                    VStack {
+                        Picker(
+                            "",
+                            selection: .init(
+                                get: {
+                                    presentation.colorScheme == .dark ? 0 : 1
+                                },
+                                set: {
+                                    presentation.colorScheme = $0 == 0 ? .dark : .light
+                                }
+                            )
+                        ) {
+                            Text("Dark mode").tag(0)
+                            Text("Light mode").tag(1)
+                        }
+                        .pickerStyle(.segmented)
+
+                        CompilerView(model: compiler, axis: .horizontal)
+                    }
+                    switch compiler.state {
                     case let .exception(ProcessError.endedWith(code: code, error: message)):
                         Text("Process ended with code \(code). Message: \(message ?? "")").foregroundColor(.red).monospaced()
                     case .exception(let error):

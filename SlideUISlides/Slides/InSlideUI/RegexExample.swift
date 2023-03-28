@@ -10,21 +10,32 @@ struct RegexExample: Slide {
     // @hint(RegexExample){
     static var hint: String? =
 """
+A teďka si ukážeme tu interaktivitu v praxi.
 
+Na Slidu vidítě 2 z přepřipravených view:
+ - Text editor view (už jsme viděli)
+ - Terminal view -> kompiluje a spouští, vypisuje níže
+ - Můžeme kód pozměnit tak, abychom ukázali stdin a stdout.
 """
     // }@hint(RegexExample)
 
     private static let defaultCode =
 #"""
-import Foundation
-let aSet = CharacterSet(charactersIn: "🧒🏻👧")
-print("👧🏻".allSatisfy { $0.unicodeScalars.allSatisfy(aSet.contains(_:)) })
-print("🧒".allSatisfy { $0.unicodeScalars.allSatisfy(aSet.contains(_:)) })
-print("👧🏼".allSatisfy { $0.unicodeScalars.allSatisfy(aSet.contains(_:)) })
+print("Hello world!")
+"""#
+
+    private static let otherCode =
+#"""
+if let custom = CommandLine.arguments.dropFirst().first {
+    print(custom)
+} else {
+    print("Hello world!")
+}
 """#
 
     private static let defaultStdIn = [
-        "swiftc code.swift && ./code"
+        "swiftc code.swift && ./code",
+        "swiftc code.swift && ./code \"Ahoj Miki!\""
     ]
 
     public final class ExposedState: ForwardEventCapturingState {
@@ -44,12 +55,19 @@ print("👧🏼".allSatisfy { $0.unicodeScalars.allSatisfy(aSet.contains(_:)) })
         public func captured(forwardEvent number: UInt) -> Bool {
             switch number {
             case 0:
-                toggle.toggle()
+                withAnimation { toggle.toggle() }
             case 1:
                 execCode.save()
                 terminal.execute()
             case 2:
-                toggle.toggle()
+                execCode.content = RegexExample.otherCode
+            case 3:
+                terminal.stdIn = RegexExample.defaultStdIn[1]
+            case 4:
+                execCode.save()
+                terminal.execute()
+            case 5:
+                withAnimation { toggle.toggle() }
             default:
                 return false
             }
@@ -66,15 +84,6 @@ print("👧🏼".allSatisfy { $0.unicodeScalars.allSatisfy(aSet.contains(_:)) })
                 Text("SlideUI").font(.presentationHeadline)
                 Text("Výstřižek z prezentace String Processing").font(.presentationSubHeadline)
             }
-            Text(
-"""
- - `CharacterSet` je `Foundation` typ
- - Obsahuje 20 kategorií, mnohem více než `Character` (např. `urlPathAllowed`)
- - Umožňuje množivné oprace: průnik, doplněk, ...
- - **Pracuje ale se skaláry, nikoliv grafémy!**
- - Podporuje zadání pomocí explicitního výčtu znaků
-"""
-            ).font(.presentationBody).frame(maxWidth: .infinity, alignment: .topLeading)
             ToggleView(toggledOn: $state.toggle) {
                 VStack(spacing: 8) {
                     TextEditorView(model: state.execCode)

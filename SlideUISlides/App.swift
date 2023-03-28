@@ -1,5 +1,6 @@
 import SwiftUI
 import SlideUI
+import SlideUICommons
 import SlideVaporized
 
 private let backgrounds: [any Background.Type] = [
@@ -12,9 +13,14 @@ private let slides: [any Slide.Type] = [
     TitleSlide.self,
     AboutSlide.self,
     MotivationSlide.self,
+    HowItStarted.self,
     RepoExample.self,
+    SlideExample.self,
+    AppExample.self,
     RegexExample.self,
     PluginSlide.self,
+    Problems.self,
+    Future.self
 ]
 
 // @focuses(focuses){
@@ -22,11 +28,21 @@ private var focuses: [Focus] = [
     Focus(kind: .specific([TitleSlide.self]), hint: generated_hint_0),
     Focus(kind: .specific([AboutSlide.self]), hint: generated_hint_1),
     Focus(kind: .unbound(Camera(offset: CGVector(dx: 0.49071108722985435, dy: 0.0), scale: 0.47189999999999954)), hint: generated_hint_2),
+
     Focus(kind: .specific([MotivationSlide.self]), hint: generated_hint_6),
+    Focus(kind: .specific([HowItStarted.self]), hint: generated_hint_6),
+
     Focus(kind: .unbound(Camera(offset: CGVector(dx: 4.0, dy: 3.0), scale: 0.3266666666666664)), hint: generated_hint_8),
     Focus(kind: .specific([RepoExample.self]), hint: generated_hint_10),
+    Focus(kind: .specific([SlideExample.self]), hint: generated_hint_6),
+    Focus(kind: .specific([AppExample.self]), hint: generated_hint_6),
     Focus(kind: .specific([RegexExample.self]), hint: generated_hint_11),
     Focus(kind: .specific([PluginSlide.self]), hint: generated_hint_12),
+
+
+    Focus(kind: .specific([Problems.self]), hint: generated_hint_11),
+    Focus(kind: .specific([Future.self]), hint: generated_hint_12),
+
     Focus(kind: .unbound(Camera(offset: CGVector(dx: 2.2353000649159385, dy: -0.5481867958034121), scale: 0.08399999999999999)), hint: generated_hint_13)
 ]
 
@@ -98,6 +114,7 @@ Děkuji za pozornost - a na závěr mi dovolte Vás ještě oslnit
 
 // }@focuses(focuses)
 
+// In this presentation, I'm forcing the slides to have paticular resoltuion
 private let presentation = {
     let presentation = PresentationProperties(
         rootPath: Array(String(#file).components(separatedBy: "/").dropLast()).joined(separator: "/"),
@@ -110,9 +127,12 @@ private let presentation = {
     presentation.screenSize = .init(width: 1920, height: 1080)
     presentation.frameSize = .init(width: 1920, height: 1080)
 
+    presentation.colorScheme = .light
+
     return presentation
 }()
 
+// This view integrates Vapor services into the Presentation
 private struct VaporControlView: View {
     @State var booted: Bool = false
 
