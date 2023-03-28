@@ -5,9 +5,12 @@ import SlideUIViews
 
 struct AppExample: Slide {
     // @offset(SlideExample)
-    static var offset = CGVector(dx: 0, dy: 0)
+    static var offset = CGVector(dx: 3.5, dy: 3.5)
     // @hint(SlideExample){
-    static var hint: String? = ""
+    static var hint: String? =
+"""
+
+"""
     // }@hint(SlideExample)
 
     private static let code =
@@ -57,7 +60,7 @@ struct SlideUISlidesApp: App {
             format: .swift,
             content: AppExample.code
         )
-        @Published var toggle: Bool = true
+        @Published var toggle: Bool = false
 
         public func captured(forwardEvent number: UInt) -> Bool {
             switch number {

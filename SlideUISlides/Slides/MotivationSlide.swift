@@ -5,7 +5,7 @@ struct MotivationSlide: Slide {
     @EnvironmentObject var presentation: PresentationProperties
 
     // @offset(MotivationSlide)
-    static var offset = CGVector(dx: 1.0, dy: 3.0)
+    static var offset = CGVector(dx: 3.5, dy: 0.0)
 
     // @hint(MotivationSlide){
     static var hint: String? =

@@ -3,7 +3,7 @@ import SlideUI
 
 struct TitleSlide: Slide {
     // @offset(TitleSlide)
-    static var offset = CGVector(dx: 0.0, dy: 0)
+    static var offset = CGVector(dx: 0.0, dy: 0.0)
 
     // @hint(TitleSlide){
     static var hint: String? =

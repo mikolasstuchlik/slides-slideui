@@ -5,7 +5,7 @@ import SlideUICommons
 
 struct RegexExample: Slide {
     // @offset(RegexExample)
-    static var offset = CGVector(dx: 3.5, dy: 3.5)
+    static var offset = CGVector(dx: 4.5, dy: 2.5)
 
     // @hint(RegexExample){
     static var hint: String? =

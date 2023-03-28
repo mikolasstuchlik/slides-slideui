@@ -65,7 +65,7 @@ var stackedBarData: [ToyShape] = [
     public final class ExposedState: ForwardEventCapturingState {
         public static var stateSingleton: PluginSlide.ExposedState = .init()
 
-        @Published var toggle: Bool = true
+        @Published var toggle: Bool = false
 
         public func captured(forwardEvent number: UInt) -> Bool {
             switch number {

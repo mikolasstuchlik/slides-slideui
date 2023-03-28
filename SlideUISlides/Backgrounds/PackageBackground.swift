@@ -3,8 +3,8 @@ import SlideUI
 import SlideUICommons
 
 struct PackageBackground: Background {
-    static var offset = CGVector(dx: 4, dy: 3)
-    static var relativeSize: CGSize = CGSize(width: 2, height: 3) / scale
+    static var offset = CGVector(dx: 3.5, dy: 3)
+    static var relativeSize: CGSize = CGSize(width: 3, height: 2) / scale
     static var scale: CGFloat = 4.0
 
     init() {}

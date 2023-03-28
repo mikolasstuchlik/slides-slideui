@@ -5,7 +5,7 @@ import SlideUICommons
 
 struct RepoExample: Slide {
     // @offset(RepoExample)
-    static var offset = CGVector(dx: 4.5, dy: 2.5)
+    static var offset = CGVector(dx: 2.5, dy: 3.5)
 
     // @hint(RepoExample){
     static var hint: String? =

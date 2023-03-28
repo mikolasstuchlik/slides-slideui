@@ -67,6 +67,7 @@
 		BE30A06A29C9DD6A00C4FD67 /* InSlideUI */ = {
 			isa = PBXGroup;
 			children = (
+				BE30A06D29C9E0AE00C4FD67 /* RepoExample.swift */,
 				BE30A06229C9D1B800C4FD67 /* RegexExample.swift */,
 				BE30A06F29C9E13400C4FD67 /* PluginSlide.swift */,
 				BE8E9ACD29CF8AD900FB0386 /* SlideExample.swift */,
@@ -120,7 +121,6 @@
 				BE30A06029C9CD9100C4FD67 /* AboutSlide.swift */,
 				BE30A06429C9D60600C4FD67 /* MotivationSlide.swift */,
 				BE8E9AC729CF780A00FB0386 /* HowItStarted.swift */,
-				BE30A06D29C9E0AE00C4FD67 /* RepoExample.swift */,
 				BE30A06A29C9DD6A00C4FD67 /* InSlideUI */,
 				BE8E9ACB29CF7FAA00FB0386 /* Problems.swift */,
 				BE8E9AC929CF7F9700FB0386 /* Future.swift */,

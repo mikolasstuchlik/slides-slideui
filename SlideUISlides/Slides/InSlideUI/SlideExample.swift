@@ -5,7 +5,7 @@ import SlideUIViews
 
 struct SlideExample: Slide {
     // @offset(SlideExample)
-    static var offset = CGVector(dx: 0, dy: 0)
+    static var offset = CGVector(dx: 3.5, dy: 2.5)
     // @hint(SlideExample){
     static var hint: String? = ""
     // }@hint(SlideExample)

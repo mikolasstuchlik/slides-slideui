@@ -14,7 +14,7 @@ private extension View {
 
 struct AboutSlide: Slide {
     // @offset(AboutSlide)
-    static var offset = CGVector(dx: 1, dy: 0.0)
+    static var offset = CGVector(dx: 1.0, dy: 0.0)
 
     // @hint(AboutSlide){
     static var hint: String? =

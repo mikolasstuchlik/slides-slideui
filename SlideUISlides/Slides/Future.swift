@@ -3,7 +3,7 @@ import SlideUI
 
 struct Future: Slide {
     // @offset(Future)
-    static var offset = CGVector(dx: 0, dy: 0)
+    static var offset = CGVector(dx: 0.0, dy: 2.0)
 
     // @hint(Future){
     static var hint: String? =
