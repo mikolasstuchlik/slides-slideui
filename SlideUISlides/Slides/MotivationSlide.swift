@@ -24,7 +24,7 @@ No, a co má SlideUI rešit?
     // }@hint(MotivationSlide)
 
     public final class ExposedState: ForwardEventCapturingState {
-        public static var stateSingleton: MotivationSlide.ExposedState = .init()
+        public static var stateSingleton: MotivationSlide.ExposedState = .makeSingleton()
 
         @Published var imageState: Bool = false
         @Published var imageVisible: Bool = false
@@ -44,7 +44,7 @@ No, a co má SlideUI rešit?
             return true
         }
     }
-    @ObservedObject private var state: ExposedState = ExposedState.stateSingleton
+    @StateObject private var state: ExposedState = ExposedState.stateSingleton
 
     init() {}
 

@@ -53,9 +53,9 @@ struct SlideUISlidesApp: App {
 """#
 
     public final class ExposedState: ForwardEventCapturingState {
-        public static var stateSingleton: AppExample.ExposedState = .init()
+        public static var stateSingleton: AppExample.ExposedState = .makeSingleton()
 
-        @StateObject var slide: TextEditorView.Model = .init(
+        var slide: TextEditorView.Model = .init(
             filePath: FileCoordinator.shared.pathToFolder(for: "slide") + "/app.swift",
             format: .swift,
             content: AppExample.code
@@ -74,7 +74,7 @@ struct SlideUISlidesApp: App {
             return true
         }
     }
-    @ObservedObject private var state: ExposedState = ExposedState.stateSingleton
+    @StateObject private var state: ExposedState = ExposedState.stateSingleton
 
 
     init() {}

@@ -63,8 +63,9 @@ var stackedBarData: [ToyShape] = [
 """
 
     public final class ExposedState: ForwardEventCapturingState {
-        public static var stateSingleton: PluginSlide.ExposedState = .init()
+        public static var stateSingleton: PluginSlide.ExposedState = .makeSingleton()
 
+        var compiler: CompilerView.Model = .init(uniqueName: "ExampleView", code: PluginSlide.defaultCode)
         @Published var toggle: Bool = false
 
         public func captured(forwardEvent number: UInt) -> Bool {
@@ -72,6 +73,8 @@ var stackedBarData: [ToyShape] = [
             case 0:
                 withAnimation { toggle.toggle() }
             case 1:
+                compiler.execute()
+            case 2:
                 withAnimation { toggle.toggle() }
             default:
                 return false
@@ -81,11 +84,10 @@ var stackedBarData: [ToyShape] = [
     }
 
     @EnvironmentObject var presentation: PresentationProperties
-
-    @ObservedObject private var state: ExposedState = ExposedState.stateSingleton
+    @StateObject private var state: ExposedState = ExposedState.stateSingleton
 
     // It was observed, that view fails to update state if `compiler` SO is inside of ExposedState...
-    @StateObject var compiler: CompilerView.Model = .init(uniqueName: "ExampleView", code: PluginSlide.defaultCode)
+
 
     init() {}
 
@@ -114,9 +116,9 @@ var stackedBarData: [ToyShape] = [
                         }
                         .pickerStyle(.segmented)
 
-                        CompilerView(model: compiler, axis: .horizontal)
+                        CompilerView(model: state.compiler, axis: .horizontal)
                     }
-                    switch compiler.state {
+                    switch state.compiler.state {
                     case let .exception(ProcessError.endedWith(code: code, error: message)):
                         Text("Process ended with code \(code). Message: \(message ?? "")").foregroundColor(.red).monospaced()
                     case .exception(let error):

@@ -68,8 +68,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/routing-kit.git",
       "state" : {
-        "revision" : "bdc9c25adbf77ba2b02113077ae8f355d87df83e",
-        "version" : "4.7.1"
+        "revision" : "611bc45c5dfb1f54b84d99b89d1f72191fb6b71b",
+        "version" : "4.7.2"
       }
     },
     {
@@ -78,7 +78,7 @@
       "location" : "https://github.com/mikolasstuchlik/SlideUI.git",
       "state" : {
         "branch" : "master",
-        "revision" : "2cc96d268293c689996c1a35dd30d79f3a6c83bd"
+        "revision" : "8d13e60329d586584785a48393c4fa9429b84d0b"
       }
     },
     {

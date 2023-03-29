@@ -39,14 +39,14 @@ if let custom = CommandLine.arguments.dropFirst().first {
     ]
 
     public final class ExposedState: ForwardEventCapturingState {
-        public static var stateSingleton: RegexExample.ExposedState = .init()
+        public static var stateSingleton: RegexExample.ExposedState = .makeSingleton()
 
-        @Published var execCode: TextEditorView.Model = .init(
+        var execCode: TextEditorView.Model = .init(
             filePath: FileCoordinator.shared.pathToFolder(for: "codeExample") + "/code.swift",
             format: .swift,
             content: RegexExample.defaultCode
         )
-        @Published var terminal: TerminalView.Model = .init(
+        var terminal: TerminalView.Model = .init(
             workingPath: URL(fileURLWithPath: FileCoordinator.shared.pathToFolder(for: "codeExample")),
             stdIn: RegexExample.defaultStdIn[0]
         )
@@ -74,7 +74,7 @@ if let custom = CommandLine.arguments.dropFirst().first {
             return true
         }
     }
-    @ObservedObject private var state: ExposedState = ExposedState.stateSingleton
+    @StateObject private var state: ExposedState = ExposedState.stateSingleton
 
     init() {}
 

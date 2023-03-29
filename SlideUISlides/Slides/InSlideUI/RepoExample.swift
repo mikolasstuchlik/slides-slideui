@@ -15,7 +15,7 @@ V budoucnu vydělím předpřipravené funkce do samostatných repozitářů, ab
     // }@hint(RepoExample)
 
     public final class ExposedState: ForwardEventCapturingState {
-        public static var stateSingleton: RepoExample.ExposedState = .init()
+        public static var stateSingleton: RepoExample.ExposedState = .makeSingleton()
 
         @Published var toggle: Bool = false
 
@@ -31,7 +31,7 @@ V budoucnu vydělím předpřipravené funkce do samostatných repozitářů, ab
             return true
         }
     }
-    @ObservedObject private var state: ExposedState = ExposedState.stateSingleton
+    @StateObject private var state: ExposedState = ExposedState.stateSingleton
 
     init() {}
 
